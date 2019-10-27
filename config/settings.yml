@@ -1,0 +1,4 @@
+plugins:
+  so_style_topic_list_enabled:
+    default: true
+    client: true

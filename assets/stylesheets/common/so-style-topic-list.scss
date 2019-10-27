@@ -1,0 +1,94 @@
+.category-drop{
+    display: none;
+}
+
+.topic-title{
+    font-size: 1.30em;
+    display: inline-block;
+}
+
+.topic-category{
+    display: none !important;
+}
+
+.link-top-line{
+    display: inline-block !important;
+    width: 85%;
+    vertical-align: middle;
+}
+
+.wms-vote-count{
+ display: block;
+ word-spacing: 100vw;
+ text-align: center;
+ margin: 5px 0;
+}
+.list-vote-count{
+   display: none;
+}
+.wms-answer-count{
+    word-spacing: 100vw;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.count-aside{
+    // border: 1px solid black;
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 5px;
+    width: 60px;
+    height: 100%;
+    vertical-align: top;
+    margin-bottom: 10px;
+}
+
+td.num.views {
+    display: none;
+}
+
+th.views.sortable.num{
+    display: none;
+}
+
+.wms-view-count{
+    word-spacing: 100vw;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.wms-poster-info{
+    float: right;
+    border: 1px solid blue;
+    margin: 10px;
+    padding: 5px;
+}
+
+th.posters , td.posters{
+    display: none;
+}
+
+ td.main-link.clearfix > span > a{
+   font-size: 1.4em;
+ }
+
+.wms-poster{
+  float: right;
+  font-size: 12px;
+  margin-right: 30px;
+}
+
+.wms-duration{
+  margin-bottom: 5px;
+}
+
+.discourse-tag.simple{
+  background-color: #e1ecf4;
+  margin: 0 4px 0 0 ;
+  padding: 2px;
+  color: #39739d !important;
+}
+
+.avatar{
+  margin-right: 2px;
+}
