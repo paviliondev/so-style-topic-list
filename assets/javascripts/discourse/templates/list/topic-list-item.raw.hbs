@@ -47,9 +47,20 @@
         asked {{createdAtFormatted}}
       </div>
         <a href="{{topic.creator.path}}" data-user-card="{{topic.creator.username}}" class="{{topic.creator.extraClasses}}">{{avatar topic.creator imageSize="small"}}{{posterName}}</a>
+        <div class="wms-trust-level">
+          <span>{{i18n 'trust_level'}}: </span><span>{{topic.creator.trust_level}}</span>
+        </div>
 
-    {{!-- {{avatar topic.creator imageSize="small"}}--}}
-      {{!-- {{posterName}}--}}  
+        <div class="public-user-fields">
+          {{~#each publicUserFields as |uf|}}
+            {{#if uf.value}}
+              <div class="public-user-field {{uf.field.dasherized_name}}">
+                <span class="user-field-name">{{uf.field.name}}:</span>
+                <span class="user-field-value">{{uf.value}}</span>
+              </div>
+            {{/if}}
+          {{~/each}}
+        </div>
     </div>
     {{/if}}
     {{discourse-tags topic mode="list" tagsForUser=tagsForUser}}

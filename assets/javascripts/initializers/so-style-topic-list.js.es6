@@ -9,6 +9,23 @@ function initializeSoStyleTopicList(api) {
       return true;
     },
     posterName: Ember.computed.alias('topic.creator.name') ,
+    @computed("topic.creator.user_fields.@each.value")
+    publicUserFields() {
+      const siteUserFields = this.site.get("user_fields");
+      if (!Ember.isEmpty(siteUserFields)) {
+        const userFields = this.get("topic.creator.user_fields");
+        return siteUserFields
+          .sortBy("position")
+          .map(field => {
+            Ember.set(field, "dasherized_name", field.get("name").dasherize());
+            const value = userFields ? userFields[field.get("id")] : null;
+            return Ember.isEmpty(value)
+              ? null
+              : Ember.Object.create({ value, field });
+          })
+          .compact();
+      }
+    },
     @computed('topic.created_at')
     createdAtFormatted(createdAt){
     return moment(createdAt).fromNow();
@@ -17,7 +34,6 @@ function initializeSoStyleTopicList(api) {
     showSideDiv(canVote, qaEnabled){
       return canVote || qaEnabled;
     } ,
-
 
     @computed('topic.views')
     topicViews(views){
