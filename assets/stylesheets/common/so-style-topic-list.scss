@@ -87,6 +87,10 @@ th.posters , td.posters{
   margin: 0 4px 0 0 ;
   padding: 2px;
   color: #39739d !important;
+
+  &:hover{
+    margin-right: 4px ;
+  }
 }
 
 .avatar{
