@@ -26,5 +26,16 @@ after_initialize do
         object.excerpt.present? && SiteSetting.so_style_topic_list_enabled   && !(object.archetype == Archetype.private_message)
       end
     end
-  # https://github.com/discourse/discourse/blob/master/lib/plugin/instance.rb
+
+    class ::BasicUserSerializer
+      attributes :user_fields
+
+      def user_fields
+        object.user_fields
+      end
+
+      def include_user_fields?
+        SiteSetting.respond_to?(:so_style_topic_list_enabled) && SiteSetting.so_style_topic_list_enabled
+      end
+    end
 end
