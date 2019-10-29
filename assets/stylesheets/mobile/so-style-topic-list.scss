@@ -1,2 +1,25 @@
-.so-style-topic-list {
+
+td.main-link.clearfix > span > a{
+  font-size: 1.0em;
+}
+
+.topic-excerpt, .wms-trust-level, .public-user-fields{
+  display: none;
+}
+
+.link-top-line{
+  width: 75%;
+}
+
+td.main-link.clearfix > span > div.wms-poster > a > img{
+  display: none;
+}
+
+.mobile-view .topic-list-item .discourse-tags{
+  font-size: $font-down-2;
+  margin-top: 5px;
+}
+
+.wms-poster{
+  margin-top: 30px;
 }

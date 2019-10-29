@@ -7,8 +7,8 @@
 # url: https://github.com/fzngagan
 
 register_asset 'stylesheets/common/so-style-topic-list.scss'
-register_asset 'stylesheets/desktop/so-style-topic-list.scss'
-register_asset 'stylesheets/mobile/so-style-topic-list.scss'
+register_asset 'stylesheets/desktop/so-style-topic-list.scss', :desktop
+register_asset 'stylesheets/mobile/so-style-topic-list.scss', :mobile
 
 enabled_site_setting :so_style_topic_list_enabled
 

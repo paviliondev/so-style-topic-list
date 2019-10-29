@@ -40,8 +40,8 @@
     {{#if expandPinned}}
       {{raw "list/topic-excerpt" topic=topic}}
     {{/if}}
+        {{discourse-tags topic mode="list" tagsForUser=tagsForUser}}
     {{#if showSideDiv}}
-
     <div class="wms-poster">
       <div class="wms-duration">
         asked {{createdAtFormatted}}
@@ -63,7 +63,7 @@
         </div>
     </div>
     {{/if}}
-    {{discourse-tags topic mode="list" tagsForUser=tagsForUser}}
+
 
 
     {{~raw-plugin-outlet name="topic-list-after-title"}}
