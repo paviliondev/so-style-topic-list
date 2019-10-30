@@ -37,16 +37,16 @@ function initializeSoStyleTopicList(api) {
 
     @computed('topic.views')
     topicViews(views){
-      return views + ( views == 1 ? " view" : " views" );
+      return views + ( views == 1 ? " "+I18n.t('views_lowercase.one') : " "+I18n.t('views_lowercase.one'));
     } ,
     @computed('topic.can_vote', 'topic.vote_count')
     topicVotes(canVote, voteCount){
-      return canVote ? (voteCount + (voteCount == 1 ? " vote":" votes")) : false ;
+      return canVote ? (voteCount + (voteCount == 1 ? " "+I18n.t('voting.vote_title'):" "+I18n.t('voting.vote_title_plural'))) : false ;
     },
 
     @computed('topic.qa_enabled', 'topic.answer_count')
     topicAnswers(qaEnabled, answerCount){
-      return qaEnabled ? (answerCount + (answerCount == 1 ? " answer":" answers")) : false ;
+      return qaEnabled ? (answerCount + (answerCount == 1 ? " "+I18n.t('answer_lowercase.one'):" "+I18n.t('answer_lowercase.other'))) : false ;
     },
   });
 }
