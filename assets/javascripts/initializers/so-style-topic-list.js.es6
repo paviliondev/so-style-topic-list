@@ -32,7 +32,7 @@ function initializeSoStyleTopicList(api) {
     },
     @computed('topic.can_vote', 'topic.qa_enabled')
     showSideDiv(canVote, qaEnabled){
-      return canVote || qaEnabled;
+      return canVote && qaEnabled;
     } ,
 
     @computed('topic.views')
