@@ -1,6 +1,6 @@
 # so-style-topic-list
 
-so-style-topic-list is a plugin for ...
+so-style-topic-list is a plugin that uses discourse-question-answer plugin to display a stackoverflow style topic list
 
 ## Installation
 
